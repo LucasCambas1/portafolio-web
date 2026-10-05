@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Portfolio",
+    "tech": "Technologies",
+    "contact": "Contact",
+    "cta": "Let's talk",
+    "menu": "Open menu"
+  },
+  "hero": {
+    "title1": "Web Development",
+    "title2": "End to End",
+    "description": "I'm Lucas Cambas Sánchez, an Information Systems Engineer. I build web applications and REST APIs with .NET and React, from requirements analysis to implementation.",
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "View Portfolio",
+    "stats": [
+      {
+        "value": "2",
+        "label": "Featured projects"
+      },
+      {
+        "value": "2026",
+        "label": "Systems Eng., UTN"
+      },
+      {
+        "value": "ES · EN",
+        "label": "Languages"
+      }
+    ],
+    "ctaCv": "Download CV"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What can I build for your business?",
+    "subtitle": "Design, architecture and code built to organize and automate each client's processes.",
+    "items": {
+      "web": {
+        "title": "Custom Web Applications",
+        "desc": "Complete management systems: customers, products, quotes and work orders, from the database to the interface."
+      },
+      "api": {
+        "title": "REST APIs with .NET",
+        "desc": "Solid backends in C# and ASP.NET Core, with design patterns and UML modeling so the code scales."
+      },
+      "react": {
+        "title": "React Interfaces",
+        "desc": "Clear, fast frontends with React and Next.js, connected to real APIs and built for any screen."
+      },
+      "consulting": {
+        "title": "Consulting & Requirements",
+        "desc": "Requirements analysis and solution design before writing code, to build what is really needed."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Case studies",
+    "title": "Featured Projects",
+    "subtitle": "A selection of web systems built in real-world environments.",
+    "details": "View details",
+    "imagePlaceholder": "Screenshot coming soon",
+    "items": {
+      "syscar": {
+        "badge": "Professional project · DeltaBiz",
+        "title": "CarSys",
+        "desc": "Comprehensive management system for car lube shops: customers, vehicles, quotes, work orders, products and services."
+      },
+      "expedientes": {
+        "badge": "Professional internship · LINSI, UTN",
+        "title": "Case File Manager",
+        "desc": "Web system for managing case files. Frontend development and API integration in a real, supervised environment."
+      }
+    },
+    "next": {
+      "label": "More code",
+      "title": "Browse my repositories",
+      "desc": "Academic and personal projects, with the source code available on GitHub.",
+      "cta": "View GitHub"
+    }
+  },
+  "tech": {
+    "eyebrow": "My technical toolkit",
+    "title": "Technologies & Skills",
+    "subtitle": "The tools I use every day to solve real problems.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "items": [
+          "React / Next.js",
+          "TypeScript / JavaScript",
+          "Responsive design"
+        ]
+      },
+      "backend": {
+        "title": "Backend & Databases",
+        "items": [
+          "C# / .NET / ASP.NET Core",
+          "REST APIs",
+          "PostgreSQL / MySQL"
+        ]
+      },
+      "tools": {
+        "title": "Design & Tools",
+        "items": [
+          "Git / GitHub",
+          "UML modeling",
+          "Design patterns (GRASP)"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Have a project in mind?",
+    "subtitle": "Write to me about a job opportunity, a custom development or a technical question.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "commitmentTitle": "Professional commitment",
+    "commitment": [
+      "Clean, documented code",
+      "Clear communication throughout the project"
+    ],
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "E.g. John Smith",
+      "email": "Email",
+      "emailPlaceholder": "E.g. john@company.com",
+      "type": "Inquiry type",
+      "typeDefault": "Select an option",
+      "types": [
+        "Job opportunity",
+        "Custom development",
+        "Technical question"
+      ],
+      "message": "Tell me about your project",
+      "messagePlaceholder": "Briefly describe your idea or need...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "sendEmail": "Write by email",
+      "success": "Thank you! I got your message and will reply shortly.",
+      "error": "The message could not be sent. Please try again or write to me by email."
+    }
+  },
+  "footer": {
+    "tagline": "Full stack web development with .NET and React, focused on clear, maintainable solutions.",
+    "navigation": "Navigation",
+    "projects": "Projects",
+    "social": "Social & Code",
+    "rights": "© 2026 Lucas Cambas Sánchez. Built in Argentina."
+  },
+  "whatsapp": {
+    "message": "Hi Lucas, I saw your portfolio and I'd like to ask you something.",
+    "label": "WhatsApp",
+    "aria": "Message me on WhatsApp",
+    "cta": "Chat now"
+  }
+}

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <!-- Permite correr la app aunque solo tengas instalado el runtime de .NET 9 o 10 -->
+    <RollForward>LatestMajor</RollForward>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Habilita `dotnet user-secrets` para guardar la contraseña SMTP fuera del repositorio -->
+    <UserSecretsId>portafolio-lucas-cambas-api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.*" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "projects": "Portafolio",
+    "tech": "Tecnologías",
+    "contact": "Contacto",
+    "cta": "Hablemos",
+    "menu": "Abrir menú"
+  },
+  "hero": {
+    "title1": "Desarrollo Web",
+    "title2": "de Punta a Punta",
+    "description": "Soy Lucas Cambas Sánchez, Ingeniero en Sistemas de Información. Desarrollo aplicaciones web y APIs REST con .NET y React, desde el análisis de requerimientos hasta la implementación.",
+    "ctaPrimary": "Comenzar Proyecto",
+    "ctaSecondary": "Ver Portafolio",
+    "stats": [
+      {
+        "value": "2",
+        "label": "Proyectos destacados"
+      },
+      {
+        "value": "2026",
+        "label": "Ing. en Sistemas, UTN"
+      },
+      {
+        "value": "ES · EN",
+        "label": "Idiomas"
+      }
+    ],
+    "ctaCv": "Descargar CV"
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "¿Qué puedo construir para tu negocio?",
+    "subtitle": "Diseño, arquitectura y código pensados para ordenar y automatizar los procesos de cada cliente.",
+    "items": {
+      "web": {
+        "title": "Aplicaciones Web a Medida",
+        "desc": "Sistemas de gestión completos: clientes, productos, presupuestos y órdenes de trabajo, de la base de datos a la interfaz."
+      },
+      "api": {
+        "title": "APIs REST con .NET",
+        "desc": "Backends sólidos en C# y ASP.NET Core, con patrones de diseño y modelado UML para que el código escale."
+      },
+      "react": {
+        "title": "Interfaces con React",
+        "desc": "Frontends claros y rápidos con React y Next.js, conectados a APIs reales y pensados para cualquier pantalla."
+      },
+      "consulting": {
+        "title": "Consultoría y Relevamiento",
+        "desc": "Análisis de requerimientos y diseño de la solución antes de escribir código, para construir lo que de verdad hace falta."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Casos de éxito",
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de sistemas web desarrollados en entornos reales.",
+    "details": "Ver detalle",
+    "imagePlaceholder": "Captura próximamente",
+    "items": {
+      "syscar": {
+        "badge": "Proyecto profesional · DeltaBiz",
+        "title": "CarSys",
+        "desc": "Sistema de gestión integral para lubricentros: clientes, vehículos, presupuestos, órdenes de trabajo, productos y servicios."
+      },
+      "expedientes": {
+        "badge": "Práctica profesional · LINSI, UTN",
+        "title": "Gestor de Expedientes",
+        "desc": "Sistema web para la gestión de expedientes. Desarrollo del frontend e integración con APIs en un entorno real y supervisado."
+      }
+    },
+    "next": {
+      "label": "Más código",
+      "title": "Mirá mis repositorios",
+      "desc": "Proyectos académicos y personales, con el código disponible en GitHub.",
+      "cta": "Ver GitHub"
+    }
+  },
+  "tech": {
+    "eyebrow": "Mi arsenal técnico",
+    "title": "Tecnologías y Habilidades",
+    "subtitle": "Las herramientas que uso a diario para resolver problemas reales.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "items": [
+          "React / Next.js",
+          "TypeScript / JavaScript",
+          "Diseño responsive"
+        ]
+      },
+      "backend": {
+        "title": "Backend y Bases de Datos",
+        "items": [
+          "C# / .NET / ASP.NET Core",
+          "APIs REST",
+          "PostgreSQL / MySQL"
+        ]
+      },
+      "tools": {
+        "title": "Diseño y Herramientas",
+        "items": [
+          "Git / GitHub",
+          "Modelado UML",
+          "Patrones de diseño (GRASP)"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "¿Tenés un proyecto en mente?",
+    "subtitle": "Escribime para una propuesta laboral, un desarrollo a medida o una consulta técnica.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "commitmentTitle": "Compromiso profesional",
+    "commitment": [
+      "Código limpio y documentado",
+      "Comunicación clara durante todo el proyecto"
+    ],
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Ej. Juan Pérez",
+      "email": "Email",
+      "emailPlaceholder": "Ej. juan@empresa.com",
+      "type": "Tipo de consulta",
+      "typeDefault": "Selecciona una opción",
+      "types": [
+        "Propuesta laboral",
+        "Desarrollo a medida",
+        "Consulta técnica"
+      ],
+      "message": "Contame sobre tu proyecto",
+      "messagePlaceholder": "Describí brevemente tu idea o necesidad...",
+      "send": "Enviar consulta",
+      "sending": "Enviando...",
+      "sendEmail": "Escribir por email",
+      "success": "¡Gracias! Recibí tu mensaje y te respondo a la brevedad.",
+      "error": "No se pudo enviar el mensaje. Probá de nuevo o escribime por email."
+    }
+  },
+  "footer": {
+    "tagline": "Desarrollo web full stack con .NET y React, enfocado en soluciones claras y mantenibles.",
+    "navigation": "Navegación",
+    "projects": "Proyectos",
+    "social": "Redes y Código",
+    "rights": "© 2026 Lucas Cambas Sánchez. Desarrollado en Argentina."
+  },
+  "whatsapp": {
+    "message": "Hola Lucas, vi tu portafolio y me gustaría hacerte una consulta.",
+    "label": "WhatsApp",
+    "aria": "Escribime por WhatsApp",
+    "cta": "Chatear ahora"
+  }
+}
