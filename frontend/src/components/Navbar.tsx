@@ -7,6 +7,7 @@ import { ArrowUpRight, CloseIcon, MenuIcon } from './Icons'
 const links = [
   { id: 'services', key: 'nav.services' },
   { id: 'projects', key: 'nav.projects' },
+  { id: 'experience', key: 'nav.experience' },
   { id: 'tech', key: 'nav.tech' },
   { id: 'contact', key: 'nav.contact' },
 ]

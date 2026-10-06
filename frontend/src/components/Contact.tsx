@@ -20,6 +20,7 @@ const fieldClass =
 export default function Contact() {
   const { t } = useTranslation()
   const [status, setStatus] = useState<Status>('idle')
+  const [copied, setCopied] = useState(false)
   const types = t('contact.form.types', { returnObjects: true }) as string[]
   const commitment = t('contact.commitment', { returnObjects: true }) as string[]
 
@@ -29,6 +30,16 @@ export default function Contact() {
     const timer = setTimeout(() => setStatus('idle'), TOAST_MS)
     return () => clearTimeout(timer)
   }, [status])
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(site.email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Sin permiso de portapapeles: el enlace mailto sigue funcionando.
+    }
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -64,18 +75,35 @@ export default function Contact() {
         </h2>
         <p className="text-muted">{t('contact.subtitle')}</p>
 
-        <a
-          href={`mailto:${site.email}`}
-          className="flex items-center gap-4 rounded-[14px] border border-line bg-surface p-5 transition-[translate,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_14px_36px_-20px_rgba(34,227,208,0.5)]"
-        >
-          <span className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-accent/10 text-accent">
-            <MailIcon />
-          </span>
-          <span className="flex min-w-0 flex-col">
-            <span className="font-display font-bold">{t('contact.emailLabel')}</span>
-            <span className="break-all text-[15px] text-muted">{site.email}</span>
-          </span>
-        </a>
+        <div className="relative transition-[translate] duration-300 hover:-translate-y-1">
+          <a
+            href={`mailto:${site.email}`}
+            className="flex items-center gap-4 rounded-[14px] border border-line bg-surface p-5 pr-28 transition-[border-color,box-shadow] duration-300 hover:border-accent hover:shadow-[0_14px_36px_-20px_rgba(34,227,208,0.5)]"
+          >
+            <span className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-accent/10 text-accent">
+              <MailIcon />
+            </span>
+            <span className="flex min-w-0 flex-col">
+              <span className="font-display font-bold">{t('contact.emailLabel')}</span>
+              <span className="break-all text-[15px] text-muted">{site.email}</span>
+            </span>
+          </a>
+          <button
+            type="button"
+            onClick={copyEmail}
+            aria-label={t('contact.copyAria')}
+            className={`absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center gap-1.5 rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors ${
+              copied ? 'border-green/50 bg-green/10 text-green' : 'border-line2 bg-bg text-muted hover:border-accent hover:text-ink'
+            }`}
+          >
+            {copied ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V6a2 2 0 0 1 2-2h9" /></svg>
+            )}
+            <span aria-live="polite">{copied ? t('contact.copied') : t('contact.copy')}</span>
+          </button>
+        </div>
         <a
           href={whatsappLink(t('whatsapp.message'))}
           target="_blank"

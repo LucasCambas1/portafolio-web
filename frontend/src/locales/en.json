@@ -5,7 +5,8 @@
     "tech": "Technologies",
     "contact": "Contact",
     "cta": "Let's talk",
-    "menu": "Open menu"
+    "menu": "Open menu",
+    "experience": "Experience"
   },
   "hero": {
     "title1": "Web Development",
@@ -27,7 +28,8 @@
         "label": "Languages"
       }
     ],
-    "ctaCv": "Download CV"
+    "ctaCv": "Download CV",
+    "availability": "Available for new projects"
   },
   "services": {
     "eyebrow": "Services",
@@ -60,9 +62,13 @@
     "imagePlaceholder": "Screenshot coming soon",
     "items": {
       "syscar": {
-        "badge": "Professional project · DeltaBiz",
+        "badge": "DeltaBiz · In production",
         "title": "CarSys",
-        "desc": "Comprehensive management system for car lube shops: customers, vehicles, quotes, work orders, products and services."
+        "desc": "Comprehensive management system for car lube shops: customers, vehicles, quotes, work orders, products and services. Deployed and used by real customers.",
+        "highlights": [
+          "Requirements analysis",
+          "Project lead"
+        ]
       },
       "expedientes": {
         "badge": "Professional internship · LINSI, UTN",
@@ -76,6 +82,33 @@
       "desc": "Academic and personal projects, with the source code available on GitHub.",
       "cta": "View GitHub"
     }
+  },
+  "experience": {
+    "eyebrow": "Background",
+    "title": "Experience & Education",
+    "subtitle": "From the classroom to production: what I did and where.",
+    "current": "Ongoing",
+    "items": [
+      {
+        "period": "Sep 2026 – Present",
+        "title": "Full-stack developer · IT Solutions",
+        "org": "DeltaBiz · CarSys",
+        "desc": "Part of the IT Solutions team. I lead CarSys and run its requirements analysis: a management system for car lube shops under active development, already deployed and used by real customers, with a .NET backend and a React frontend.",
+        "current": true
+      },
+      {
+        "period": "Jul 2025 – Dec 2025",
+        "title": "Professional internship · Frontend development",
+        "org": "LINSI, UTN",
+        "desc": "Frontend development and API integration for a case file management web system, in a real, supervised environment."
+      },
+      {
+        "period": "Apr 2019 – Jul 2026",
+        "title": "Information Systems Engineering",
+        "org": "National Technological University (UTN)",
+        "desc": "Training in requirements analysis, UML modeling, design patterns and end-to-end software development."
+      }
+    ]
   },
   "tech": {
     "eyebrow": "My technical toolkit",
@@ -103,7 +136,9 @@
         "items": [
           "Git / GitHub",
           "UML modeling",
-          "Design patterns (GRASP)"
+          "Design patterns (GRASP)",
+          "Requirements analysis",
+          "Project leadership"
         ]
       }
     }
@@ -140,7 +175,10 @@
       "success": "Thank you! I got your message and will reply shortly.",
       "errorTitle": "Something went wrong",
       "error": "The message could not be sent. Please try again or write to me by email."
-    }
+    },
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyAria": "Copy email"
   },
   "footer": {
     "tagline": "Full stack web development with .NET and React, focused on clear, maintainable solutions.",

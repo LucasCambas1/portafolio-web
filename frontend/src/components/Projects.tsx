@@ -4,15 +4,17 @@ import SectionHeader from './SectionHeader'
 import { ArrowUpRight } from './Icons'
 import { projects, site, type Project } from '../data/site'
 
-const colorStyles: Record<Project['color'], { badge: string; tag: string; cover: string }> = {
+const colorStyles: Record<Project['color'], { badge: string; tag: string; cover: string; highlight: string }> = {
   accent: {
     badge: 'bg-accent/10 text-accent',
     tag: 'text-accent',
+    highlight: 'border-accent/40 bg-accent/10 text-accent',
     cover: 'from-[#0e1630] to-surface',
   },
   violet: {
     badge: 'bg-violet/10 text-violet',
     tag: 'text-violet',
+    highlight: 'border-violet/40 bg-violet/10 text-violet',
     cover: 'from-[#150e30] to-surface',
   },
 }
@@ -21,6 +23,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { t } = useTranslation()
   const c = colorStyles[project.color]
   const base = `projects.items.${project.id}`
+  const highlights = t(`${base}.highlights`, { returnObjects: true, defaultValue: [] }) as string[]
 
   return (
     <Card delay={index * 130} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-surface">
@@ -44,6 +47,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <span className={`self-start rounded-md px-2.5 py-1 font-mono text-xs ${c.badge}`}>{t(`${base}.badge`)}</span>
         <h3 className="font-display text-2xl font-bold">{t(`${base}.title`)}</h3>
         <p className="text-[15px] text-muted">{t(`${base}.desc`)}</p>
+        {highlights.length > 0 && (
+          <ul className="flex flex-wrap gap-2">
+            {highlights.map((h) => (
+              <li
+                key={h}
+                className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-[13px] font-semibold ${c.highlight}`}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.3 5.8 21.1l1.6-7L2 9.3l7.1-.7L12 2z" />
+                </svg>
+                {h}
+              </li>
+            ))}
+          </ul>
+        )}
         <ul className={`flex flex-wrap gap-1.5 font-mono text-[11px] ${c.tag}`}>
           {project.tags.map((tag) => (
             <li key={tag} className="rounded-md border border-line2 px-2 py-0.5">

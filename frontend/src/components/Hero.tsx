@@ -7,13 +7,13 @@ interface Stat {
   label: string
 }
 
-function Chip({ className, dot, delay, children }: { className: string; dot: string; delay: string; children: string }) {
+function Chip({ className, dot, hover, delay, children }: { className: string; dot: string; hover: string; delay: string; children: string }) {
   return (
     <div
       style={{ animationDelay: delay }}
-      className={`absolute flex animate-[float_6s_ease-in-out_infinite] items-center gap-2.5 rounded-xl border border-line2 bg-surface px-4 py-2.5 text-sm font-medium ${className}`}
+      className={`group absolute flex animate-[float_6s_ease-in-out_infinite] cursor-default items-center gap-2.5 rounded-xl border border-line2 bg-surface px-4 py-2.5 text-sm font-medium transition-[translate,scale,border-color,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 ${hover} ${className}`}
     >
-      <span className={`h-2 w-2 rounded-full ${dot}`} />
+      <span className={`h-2 w-2 rounded-full transition-transform duration-300 group-hover:scale-125 ${dot}`} />
       {children}
     </div>
   )
@@ -26,7 +26,14 @@ export default function Hero() {
   return (
     <section id="top" className="mx-auto flex max-w-[1160px] flex-wrap items-center gap-10 px-4 pb-16 pt-10 sm:gap-12 sm:px-6 sm:pb-24 sm:pt-16 lg:pt-20">
       <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-6 sm:gap-7">
-        <h1 style={{ animationDelay: '0ms' }} className="hero-in font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-[-0.03em] sm:text-6xl lg:text-[68px]">
+        <div style={{ animationDelay: '0ms' }} className="hero-in flex self-start items-center gap-2.5 rounded-full border border-green/30 bg-green/10 px-4 py-1.5 text-sm font-medium text-green">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green" />
+          </span>
+          {t('hero.availability')}
+        </div>
+        <h1 style={{ animationDelay: '60ms' }} className="hero-in font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-[-0.03em] sm:text-6xl lg:text-[68px]">
           {t('hero.title1')}{' '}
           <span className="bg-linear-to-r from-accent2 to-accent bg-clip-text text-transparent">
             {t('hero.title2')}
@@ -81,9 +88,9 @@ export default function Hero() {
             alt=""
             className="absolute left-1/2 top-1/2 h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover shadow-[0_0_40px_rgba(108,123,255,0.35)]"
           />
-          <Chip className="left-0 top-[34px]" dot="bg-accent" delay="0s">.NET / C#</Chip>
-          <Chip className="right-0 top-[256px]" dot="bg-violet" delay="-2s">Full-Stack</Chip>
-          <Chip className="left-[60px] top-[366px]" dot="bg-amber" delay="-4s">React</Chip>
+          <Chip className="left-0 top-[34px]" dot="bg-accent" hover="hover:border-accent hover:shadow-[0_12px_32px_-12px_rgba(34,227,208,0.6)]" delay="0s">.NET / C#</Chip>
+          <Chip className="right-0 top-[256px]" dot="bg-violet" hover="hover:border-violet hover:shadow-[0_12px_32px_-12px_rgba(167,139,250,0.6)]" delay="-2s">Full-Stack</Chip>
+          <Chip className="left-[60px] top-[366px]" dot="bg-amber" hover="hover:border-amber hover:shadow-[0_12px_32px_-12px_rgba(242,184,75,0.6)]" delay="-4s">React</Chip>
         </div>
       </div>
     </section>

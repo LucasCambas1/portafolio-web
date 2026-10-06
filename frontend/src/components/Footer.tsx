@@ -23,6 +23,7 @@ export default function Footer() {
             <div className="font-display font-bold">{t('footer.navigation')}</div>
             <a className={linkClass} href="#services">{t('nav.services')}</a>
             <a className={linkClass} href="#projects">{t('nav.projects')}</a>
+            <a className={linkClass} href="#experience">{t('nav.experience')}</a>
             <a className={linkClass} href="#tech">{t('nav.tech')}</a>
             <a className={linkClass} href="#contact">{t('nav.contact')}</a>
           </nav>

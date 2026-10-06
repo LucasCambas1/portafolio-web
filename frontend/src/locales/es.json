@@ -5,7 +5,8 @@
     "tech": "Tecnologías",
     "contact": "Contacto",
     "cta": "Hablemos",
-    "menu": "Abrir menú"
+    "menu": "Abrir menú",
+    "experience": "Experiencia"
   },
   "hero": {
     "title1": "Desarrollo Web",
@@ -27,7 +28,8 @@
         "label": "Idiomas"
       }
     ],
-    "ctaCv": "Descargar CV"
+    "ctaCv": "Descargar CV",
+    "availability": "Disponible para nuevos proyectos"
   },
   "services": {
     "eyebrow": "Servicios",
@@ -60,9 +62,13 @@
     "imagePlaceholder": "Captura próximamente",
     "items": {
       "syscar": {
-        "badge": "Proyecto profesional · DeltaBiz",
+        "badge": "DeltaBiz · En producción",
         "title": "CarSys",
-        "desc": "Sistema de gestión integral para lubricentros: clientes, vehículos, presupuestos, órdenes de trabajo, productos y servicios."
+        "desc": "Sistema de gestión integral para lubricentros: clientes, vehículos, presupuestos, órdenes de trabajo, productos y servicios. Desplegado y en uso con clientes reales.",
+        "highlights": [
+          "Relevamiento de requerimientos",
+          "Líder de proyecto"
+        ]
       },
       "expedientes": {
         "badge": "Práctica profesional · LINSI, UTN",
@@ -76,6 +82,33 @@
       "desc": "Proyectos académicos y personales, con el código disponible en GitHub.",
       "cta": "Ver GitHub"
     }
+  },
+  "experience": {
+    "eyebrow": "Trayectoria",
+    "title": "Experiencia y Formación",
+    "subtitle": "Del aula a producción: lo que hice y dónde lo hice.",
+    "current": "En curso",
+    "items": [
+      {
+        "period": "Sep 2026 – Actualidad",
+        "title": "Desarrollador full stack · Soluciones IT",
+        "org": "DeltaBiz · CarSys",
+        "desc": "Parte del área de Soluciones IT. Lidero CarSys y estoy a cargo del relevamiento de requerimientos: un sistema de gestión para lubricentros en desarrollo activo, ya desplegado y en uso con clientes reales, con backend en .NET y frontend en React.",
+        "current": true
+      },
+      {
+        "period": "Jul 2025 – Dic 2025",
+        "title": "Práctica profesional · Desarrollo frontend",
+        "org": "LINSI, UTN",
+        "desc": "Desarrollo del frontend e integración con APIs de un sistema web de gestión de expedientes, en un entorno real y supervisado."
+      },
+      {
+        "period": "Abr 2019 – Jul 2026",
+        "title": "Ingeniería en Sistemas de Información",
+        "org": "Universidad Tecnológica Nacional",
+        "desc": "Formación en análisis de requerimientos, modelado UML, patrones de diseño y desarrollo de software de punta a punta."
+      }
+    ]
   },
   "tech": {
     "eyebrow": "Mi arsenal técnico",
@@ -103,7 +136,9 @@
         "items": [
           "Git / GitHub",
           "Modelado UML",
-          "Patrones de diseño (GRASP)"
+          "Patrones de diseño (GRASP)",
+          "Relevamiento de requerimientos",
+          "Liderazgo de proyectos"
         ]
       }
     }
@@ -140,7 +175,10 @@
       "success": "¡Gracias! Recibí tu mensaje y te respondo a la brevedad.",
       "errorTitle": "Algo salió mal",
       "error": "No se pudo enviar el mensaje. Probá de nuevo o escribime por email."
-    }
+    },
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "copyAria": "Copiar email"
   },
   "footer": {
     "tagline": "Desarrollo web full stack con .NET y React, enfocado en soluciones claras y mantenibles.",
