@@ -1,14 +1,18 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { site, whatsappLink } from '../data/site'
 import { MailIcon } from './Icons'
 import Reveal from './Reveal'
+import Toast from './Toast'
 import WhatsAppLogo from './WhatsAppLogo'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 // En desarrollo: http://localhost:5080 (ver .env.example). En producción: la URL de tu API en .NET.
 const API_URL = import.meta.env.VITE_API_URL ?? ''
+
+// Cuánto tiempo se ve el aviso de enviado / error (ms).
+const TOAST_MS = 3000
 
 const fieldClass =
   'w-full min-w-0 rounded-[10px] border border-line2 bg-bg px-4 py-3.5 text-base text-ink placeholder:text-muted/60'
@@ -18,6 +22,13 @@ export default function Contact() {
   const [status, setStatus] = useState<Status>('idle')
   const types = t('contact.form.types', { returnObjects: true }) as string[]
   const commitment = t('contact.commitment', { returnObjects: true }) as string[]
+
+  // El aviso se quita solo a los 3 segundos.
+  useEffect(() => {
+    if (status !== 'success' && status !== 'error') return
+    const timer = setTimeout(() => setStatus('idle'), TOAST_MS)
+    return () => clearTimeout(timer)
+  }, [status])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -153,12 +164,18 @@ export default function Contact() {
           </a>
         </div>
 
-        <p role="status" aria-live="polite" className={`text-sm ${status === 'success' ? 'text-green' : 'text-[#ff8a7a]'}`}>
-          {status === 'success' && t('contact.form.success')}
-          {status === 'error' && t('contact.form.error')}
-        </p>
       </form>
       </Reveal>
+
+      {(status === 'success' || status === 'error') && (
+        <Toast
+          key={status}
+          variant={status}
+          title={status === 'success' ? t('contact.form.successTitle') : t('contact.form.errorTitle')}
+          message={status === 'success' ? t('contact.form.success') : t('contact.form.error')}
+          duration={TOAST_MS}
+        />
+      )}
     </section>
   )
 }

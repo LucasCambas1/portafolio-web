@@ -136,7 +136,9 @@
       "send": "Send message",
       "sending": "Sending...",
       "sendEmail": "Write by email",
+      "successTitle": "Message sent!",
       "success": "Thank you! I got your message and will reply shortly.",
+      "errorTitle": "Something went wrong",
       "error": "The message could not be sent. Please try again or write to me by email."
     }
   },

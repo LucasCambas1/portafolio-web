@@ -136,7 +136,9 @@
       "send": "Enviar consulta",
       "sending": "Enviando...",
       "sendEmail": "Escribir por email",
+      "successTitle": "¡Mensaje enviado!",
       "success": "¡Gracias! Recibí tu mensaje y te respondo a la brevedad.",
+      "errorTitle": "Algo salió mal",
       "error": "No se pudo enviar el mensaje. Probá de nuevo o escribime por email."
     }
   },
