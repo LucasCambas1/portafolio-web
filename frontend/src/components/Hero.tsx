@@ -89,6 +89,7 @@ export default function Hero() {
             className="absolute left-1/2 top-1/2 h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover shadow-[0_0_40px_rgba(108,123,255,0.35)]"
           />
           <Chip className="left-0 top-[34px]" dot="bg-accent" hover="hover:border-accent hover:shadow-[0_12px_32px_-12px_rgba(34,227,208,0.6)]" delay="0s">.NET / C#</Chip>
+          <Chip className="right-0 top-[84px]" dot="bg-green" hover="hover:border-green hover:shadow-[0_12px_32px_-12px_rgba(74,222,154,0.6)]" delay="-3s">{t('hero.chipIT')}</Chip>
           <Chip className="right-0 top-[256px]" dot="bg-violet" hover="hover:border-violet hover:shadow-[0_12px_32px_-12px_rgba(167,139,250,0.6)]" delay="-2s">Full-Stack</Chip>
           <Chip className="left-[60px] top-[366px]" dot="bg-amber" hover="hover:border-amber hover:shadow-[0_12px_32px_-12px_rgba(242,184,75,0.6)]" delay="-4s">React</Chip>
         </div>
