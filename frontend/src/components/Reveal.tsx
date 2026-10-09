@@ -16,8 +16,8 @@ export default function Reveal({ children, className = '', delay = 0 }: Props) {
     <div
       ref={ref}
       style={{ transitionDelay: visible ? `${delay}ms` : undefined }}
-      className={`transition-[opacity,translate] duration-700 ease-out ${
-        visible ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'
+      className={`transition-[opacity,translate,filter] duration-700 ease-out ${
+        visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-7 opacity-0 blur-[6px]'
       } ${className}`}
     >
       {children}

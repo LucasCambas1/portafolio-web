@@ -7,10 +7,12 @@ import Tech from './components/Tech'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />

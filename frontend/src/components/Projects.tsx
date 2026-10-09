@@ -32,13 +32,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const highlights = t(`${base}.highlights`, { returnObjects: true, defaultValue: [] }) as string[]
 
   return (
-    <Card delay={index * 130} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-surface">
+    <Card tilt delay={index * 130} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-surface">
       {project.image ? (
         <div className="overflow-hidden border-b border-line">
           <img
             src={project.image}
             alt={t(`${base}.title`)}
-            className="h-[190px] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105 sm:h-[220px]"
+            className="h-[190px] w-full scale-105 object-cover object-top transition-[translate,scale] duration-300 ease-out [translate:calc(var(--px,0)*-12px)_calc(var(--py,0)*-8px)] group-hover:scale-110 sm:h-[220px]"
             loading="lazy"
           />
         </div>

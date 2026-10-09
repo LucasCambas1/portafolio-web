@@ -96,6 +96,28 @@
   animation: fade-up 0.8s ease-out both;
 }
 
+/* Fondo del hero: grilla que se desplaza y manchas de color que flotan. */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(108, 123, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 123, 255, 0.09) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-move 24s linear infinite;
+}
+@keyframes grid-move {
+  to {
+    background-position: 48px 48px;
+  }
+}
+@keyframes blob-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(70px, 50px) scale(1.15); }
+}
+@keyframes blob-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-80px, 40px) scale(0.9); }
+}
+
 /* Quien prefiere menos movimiento (ajuste del sistema operativo) ve todo quieto. */
 @media (prefers-reduced-motion: reduce) {
   *,

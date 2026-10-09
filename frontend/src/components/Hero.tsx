@@ -19,12 +19,29 @@ function Chip({ className, dot, hover, delay, children }: { className: string; d
   )
 }
 
+/** Fondo animado y sutil: grilla que se desplaza despacio y manchas de color que flotan. */
+function HeroBackground() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black_55%,transparent)]"
+    >
+      <div className="hero-grid absolute inset-0" />
+      <div className="absolute -left-32 -top-16 h-[460px] w-[460px] animate-[blob-a_20s_ease-in-out_infinite] rounded-full bg-accent/15 blur-[120px]" />
+      <div className="absolute -right-24 top-10 h-[420px] w-[420px] animate-[blob-b_24s_ease-in-out_infinite] rounded-full bg-accent2/20 blur-[120px]" />
+      <div className="absolute bottom-0 left-1/3 h-[320px] w-[320px] animate-[blob-a_28s_ease-in-out_infinite_reverse] rounded-full bg-violet/10 blur-[110px]" />
+    </div>
+  )
+}
+
 export default function Hero() {
   const { t } = useTranslation()
   const stats = t('hero.stats', { returnObjects: true }) as Stat[]
 
   return (
-    <section id="top" className="mx-auto flex max-w-[1160px] flex-wrap items-center gap-10 px-4 pb-16 pt-10 sm:gap-12 sm:px-6 sm:pb-24 sm:pt-16 lg:pt-20">
+    <div className="relative overflow-hidden">
+      <HeroBackground />
+    <section id="top" className="relative z-10 mx-auto flex max-w-[1160px] flex-wrap items-center gap-10 px-4 pb-16 pt-10 sm:gap-12 sm:px-6 sm:pb-24 sm:pt-16 lg:pt-20">
       <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-6 sm:gap-7">
         <div style={{ animationDelay: '0ms' }} className="hero-in flex self-start items-center gap-2.5 rounded-full border border-green/30 bg-green/10 px-4 py-1.5 text-sm font-medium text-green">
           <span className="relative flex h-2 w-2">
@@ -95,5 +112,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    </div>
   )
 }
