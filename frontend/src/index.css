@@ -12,9 +12,40 @@
   --color-violet: #a78bfa;
   --color-amber: #f2b84b;
   --color-green: #4ade9a;
+  --color-on-accent: #04101a;
   --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Tema oscuro (por defecto) y claro: el claro redefine los mismos colores. */
+:root {
+  color-scheme: dark;
+  --grid: rgba(255, 255, 255, 0.025);
+  --grid-hero: rgba(108, 123, 255, 0.09);
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-line: #e1e7f0;
+  --color-line2: #d2dae7;
+  --color-ink: #0f172a;
+  --color-muted: #55627a;
+  --color-accent: #0f766e;
+  --color-accent2: #4f46e5;
+  --color-violet: #7c3aed;
+  --color-amber: #b45309;
+  --color-green: #15803d;
+  --color-on-accent: #ffffff;
+  --grid: rgba(15, 23, 42, 0.04);
+  --grid-hero: rgba(79, 70, 229, 0.08);
+}
+/* Transición suave solo en el instante de cambiar de tema. */
+:root.theme-switching *,
+:root.theme-switching *::before,
+:root.theme-switching *::after {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, fill 0.35s ease;
 }
 
 @layer base {
@@ -35,8 +66,8 @@
     margin: 0;
     background-color: var(--color-bg);
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
     background-size: 48px 48px;
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -99,8 +130,8 @@
 /* Fondo del hero: grilla que se desplaza y manchas de color que flotan. */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(108, 123, 255, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(108, 123, 255, 0.09) 1px, transparent 1px);
+    linear-gradient(var(--grid-hero) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-hero) 1px, transparent 1px);
   background-size: 48px 48px;
   animation: grid-move 24s linear infinite;
 }
@@ -117,6 +148,11 @@
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-80px, 40px) scale(0.9); }
 }
+
+/* Botón de CV: relleno de progreso al descargar, y pop del tilde. */
+@keyframes cv-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes pop-in { 0% { transform: scale(0.4); opacity: 0; } 70% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes icon-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
 
 /* Quien prefiere menos movimiento (ajuste del sistema operativo) ve todo quieto. */
 @media (prefers-reduced-motion: reduce) {

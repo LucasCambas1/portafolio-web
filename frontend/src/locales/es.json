@@ -6,7 +6,9 @@
     "contact": "Contacto",
     "cta": "Hablemos",
     "menu": "Abrir menú",
-    "experience": "Experiencia"
+    "experience": "Experiencia",
+    "themeToLight": "Cambiar a modo claro",
+    "themeToDark": "Cambiar a modo oscuro"
   },
   "hero": {
     "title1": "Desarrollo Web",
@@ -30,7 +32,9 @@
     ],
     "ctaCv": "Descargar CV",
     "availability": "Disponible para nuevos proyectos",
-    "chipIT": "Soluciones IT"
+    "chipIT": "Soluciones IT",
+    "cvDownloading": "Descargando…",
+    "cvDone": "¡CV descargado!"
   },
   "services": {
     "eyebrow": "Servicios",
@@ -191,7 +195,9 @@
     "navigation": "Navegación",
     "projects": "Proyectos",
     "social": "Redes y Código",
-    "rights": "© 2026 Lucas Cambas Sánchez. Desarrollado en Argentina."
+    "rights": "© 2026 Lucas Cambas Sánchez. Desarrollado en Argentina.",
+    "copyLink": "Copiar link del portafolio",
+    "copied": "¡Link copiado!"
   },
   "whatsapp": {
     "message": "Hola Lucas, vi tu portafolio y me gustaría hacerte una consulta.",

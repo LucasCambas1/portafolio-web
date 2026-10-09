@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { site } from '../data/site'
+import ThemeToggle from './ThemeToggle'
 import { ArrowUpRight, CloseIcon, MenuIcon } from './Icons'
 
 const links = [
@@ -55,7 +56,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
           <div className="flex overflow-hidden rounded-full border border-line2 font-mono text-[13px]">
             {langButton('es')}
             {langButton('en')}
@@ -97,7 +99,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-[10px] bg-linear-to-r from-accent to-accent2 px-5 py-3 font-bold text-[#04101a]"
+                className="flex items-center justify-center gap-2 rounded-[10px] bg-linear-to-r from-accent to-accent2 px-5 py-3 font-bold text-on-accent"
               >
                 {t('nav.cta')}
                 <ArrowUpRight />

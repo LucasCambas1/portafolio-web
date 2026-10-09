@@ -3,6 +3,7 @@
 export const site = {
   name: 'Lucas Cambas Sánchez',
   brand: { first: 'lucas', highlight: 'cambas', tld: '.dev' },
+  url: 'https://lucascambas-dev.com.ar/',
   email: 'lucascambas@gmail.com',
   linkedin: 'https://www.linkedin.com/in/lucas-cambas-sanchez/',
   linkedinHandle: 'lucas-cambas-sanchez',

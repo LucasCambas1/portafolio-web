@@ -180,7 +180,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="min-h-12 flex-[1_1_160px] cursor-pointer rounded-[10px] bg-linear-to-r from-accent to-accent2 px-6 py-4 font-bold text-[#04101a] transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
+            className="min-h-12 flex-[1_1_160px] cursor-pointer rounded-[10px] bg-linear-to-r from-accent to-accent2 px-6 py-4 font-bold text-on-accent transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
           >
             {status === 'sending' ? t('contact.form.sending') : t('contact.form.send')}
           </button>

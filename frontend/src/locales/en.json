@@ -6,7 +6,9 @@
     "contact": "Contact",
     "cta": "Let's talk",
     "menu": "Open menu",
-    "experience": "Experience"
+    "experience": "Experience",
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode"
   },
   "hero": {
     "title1": "Web Development",
@@ -30,7 +32,9 @@
     ],
     "ctaCv": "Download CV",
     "availability": "Available for new projects",
-    "chipIT": "IT Solutions"
+    "chipIT": "IT Solutions",
+    "cvDownloading": "Downloading…",
+    "cvDone": "CV downloaded!"
   },
   "services": {
     "eyebrow": "Services",
@@ -191,7 +195,9 @@
     "navigation": "Navigation",
     "projects": "Projects",
     "social": "Social & Code",
-    "rights": "© 2026 Lucas Cambas Sánchez. Built in Argentina."
+    "rights": "© 2026 Lucas Cambas Sánchez. Built in Argentina.",
+    "copyLink": "Copy portfolio link",
+    "copied": "Link copied!"
   },
   "whatsapp": {
     "message": "Hi Lucas, I saw your portfolio and I'd like to ask you something.",

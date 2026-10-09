@@ -9,19 +9,19 @@ const colorStyles: Record<Project['color'], { badge: string; tag: string; cover:
     badge: 'bg-accent/10 text-accent',
     tag: 'text-accent',
     highlight: 'border-accent/40 bg-accent/10 text-accent',
-    cover: 'from-[#0e1630] to-surface',
+    cover: 'from-accent/15 to-surface',
   },
   violet: {
     badge: 'bg-violet/10 text-violet',
     tag: 'text-violet',
     highlight: 'border-violet/40 bg-violet/10 text-violet',
-    cover: 'from-[#150e30] to-surface',
+    cover: 'from-violet/15 to-surface',
   },
   amber: {
     badge: 'bg-amber/10 text-amber',
     tag: 'text-amber',
     highlight: 'border-amber/40 bg-amber/10 text-amber',
-    cover: 'from-[#2a1d08] to-surface',
+    cover: 'from-amber/15 to-surface',
   },
 }
 

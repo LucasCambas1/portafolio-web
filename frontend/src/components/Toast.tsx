@@ -95,7 +95,7 @@ export default function Toast({ variant, title, message, duration }: ToastProps)
               ))}
 
             <span
-              className={`relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br text-[#04101a] ${p.icon}`}
+              className={`relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br text-on-accent ${p.icon}`}
               style={{
                 animation:
                   variant === 'success'
@@ -125,7 +125,7 @@ export default function Toast({ variant, title, message, duration }: ToastProps)
           </p>
 
           {/* Barra de progreso */}
-          <div className="absolute inset-x-0 bottom-0 h-[3px] bg-white/5">
+          <div className="absolute inset-x-0 bottom-0 h-[3px] bg-ink/10">
             <div
               className={`h-full origin-left bg-gradient-to-r ${p.bar}`}
               style={{ animation: `toast-progress ${duration}ms linear forwards` }}

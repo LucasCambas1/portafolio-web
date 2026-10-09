@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import CvButton from './CvButton'
 import { site } from '../data/site'
 import { ArrowRight } from './Icons'
 
@@ -66,7 +67,7 @@ export default function Hero() {
         <div style={{ animationDelay: '360ms' }} className="hero-in flex flex-wrap gap-3.5">
           <a
             href="#contact"
-            className="group flex w-full items-center justify-center gap-2.5 rounded-[10px] bg-linear-to-r from-accent to-accent2 px-7 py-[15px] font-bold text-[#04101a] transition-[opacity,translate,box-shadow] duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-[0_10px_30px_-10px_rgba(34,227,208,0.6)] sm:w-auto"
+            className="group flex w-full items-center justify-center gap-2.5 rounded-[10px] bg-linear-to-r from-accent to-accent2 px-7 py-[15px] font-bold text-on-accent transition-[opacity,translate,box-shadow] duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-[0_10px_30px_-10px_rgba(34,227,208,0.6)] sm:w-auto"
           >
             {t('hero.ctaPrimary')}
             <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -77,13 +78,7 @@ export default function Hero() {
           >
             {t('hero.ctaSecondary')}
           </a>
-          <a
-            href={site.cv}
-            download
-            className="flex-1 rounded-[10px] border border-line2 px-7 py-[15px] text-center font-medium text-muted transition-[border-color,color,translate] duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-ink sm:flex-none"
-          >
-            {t('hero.ctaCv')}
-          </a>
+          <CvButton href={site.cv} />
         </div>
 
         <dl style={{ animationDelay: '480ms' }} className="hero-in mt-3 flex flex-wrap gap-x-8 gap-y-5 sm:mt-5 sm:gap-10">

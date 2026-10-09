@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import CopyLinkButton from './CopyLinkButton'
 import { site, whatsappLink } from '../data/site'
 
 const linkClass = 'text-muted transition-colors hover:text-accent'
@@ -17,6 +18,7 @@ export default function Footer() {
               {site.brand.tld}
             </div>
             <p className="text-[15px] text-muted">{t('footer.tagline')}</p>
+            <CopyLinkButton />
           </div>
 
           <nav className="flex flex-[1_1_140px] flex-col gap-2.5 text-[15px]" aria-label={t('footer.navigation')}>
