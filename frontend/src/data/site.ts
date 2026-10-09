@@ -19,11 +19,11 @@ export function whatsappLink(message: string) {
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`
 }
 
-export type ProjectColor = 'accent' | 'violet'
+export type ProjectColor = 'accent' | 'violet' | 'amber'
 
 export interface Project {
   /** Clave del texto en los archivos de idioma: projects.items.<id> */
-  id: 'syscar' | 'expedientes'
+  id: 'syscar' | 'expedientes' | 'deltabiz'
   tags: string[]
   color: ProjectColor
   /** Ruta de una captura en /public (ej. '/projects/syscar.png'). Opcional. */
@@ -33,6 +33,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  { id: 'syscar', tags: ['.NET', 'React', 'PostgreSQL'], color: 'accent', image: '/projects/syscar.webp' },
+  { id: 'syscar', tags: ['.NET', 'React', 'PostgreSQL'], color: 'accent', image: '/projects/syscar.webp', href: 'https://www.carsys.com.ar/' },
   { id: 'expedientes', tags: ['Frontend', 'APIs'], color: 'violet', image: '/projects/expedientes.webp' },
+  { id: 'deltabiz', tags: ['Diseño web', 'Responsive', 'Frontend'], color: 'amber', image: '/projects/deltabiz.webp', href: 'https://deltabiz.com.ar/' },
 ]

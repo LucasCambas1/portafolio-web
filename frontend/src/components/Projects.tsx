@@ -17,6 +17,12 @@ const colorStyles: Record<Project['color'], { badge: string; tag: string; cover:
     highlight: 'border-violet/40 bg-violet/10 text-violet',
     cover: 'from-[#150e30] to-surface',
   },
+  amber: {
+    badge: 'bg-amber/10 text-amber',
+    tag: 'text-amber',
+    highlight: 'border-amber/40 bg-amber/10 text-amber',
+    cover: 'from-[#2a1d08] to-surface',
+  },
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -95,7 +101,7 @@ export default function Projects() {
         {projects.map((p, i) => (
           <ProjectCard key={p.id} project={p} index={i} />
         ))}
-        <Card plain delay={projects.length * 130} className="flex min-h-[240px] flex-col items-center justify-center gap-3 rounded-2xl border-[1.5px] border-dashed border-line2 p-8 text-center md:min-h-[320px]">
+        <Card plain delay={projects.length * 130} className="flex min-h-[240px] flex-col items-center justify-center gap-3 rounded-2xl border-[1.5px] border-dashed border-line2 p-8 text-center md:min-h-[320px] lg:col-span-3 lg:min-h-[220px]">
           <div className="font-mono text-[13px] text-muted">{t('projects.next.label')}</div>
           <h3 className="font-display text-[22px] font-bold">{t('projects.next.title')}</h3>
           <p className="text-[15px] text-muted">{t('projects.next.desc')}</p>

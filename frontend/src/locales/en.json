@@ -16,7 +16,7 @@
     "ctaSecondary": "View Portfolio",
     "stats": [
       {
-        "value": "2",
+        "value": "3",
         "label": "Featured projects"
       },
       {
@@ -75,6 +75,11 @@
         "badge": "Professional internship · LINSI, UTN",
         "title": "Case File Manager",
         "desc": "Web system for managing case files. Frontend development and API integration in a real, supervised environment."
+      },
+      "deltabiz": {
+        "badge": "Professional project · DeltaBiz",
+        "title": "DeltaBiz website",
+        "desc": "Corporate website for the consultancy where I work. It presents its growth method for SMEs, its services and a form to request a diagnosis. Custom design, responsive, with light and dark modes."
       }
     },
     "next": {
@@ -94,7 +99,7 @@
         "period": "Sep 2026 – Present",
         "title": "Full-stack developer · IT Solutions",
         "org": "DeltaBiz · CarSys",
-        "desc": "Part of the IT Solutions team. I lead CarSys and run its requirements analysis: a management system for car lube shops under active development, already deployed and used by real customers, with a .NET backend and a React frontend.",
+        "desc": "Part of the IT Solutions team. I lead CarSys and run its requirements analysis: a management system for car lube shops under active development, already deployed and used by real customers, with a .NET backend and a React frontend. I also built the consultancy's corporate website.",
         "current": true
       },
       {

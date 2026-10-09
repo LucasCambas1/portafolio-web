@@ -16,7 +16,7 @@
     "ctaSecondary": "Ver Portafolio",
     "stats": [
       {
-        "value": "2",
+        "value": "3",
         "label": "Proyectos destacados"
       },
       {
@@ -75,6 +75,11 @@
         "badge": "Práctica profesional · LINSI, UTN",
         "title": "Gestor de Expedientes",
         "desc": "Sistema web para la gestión de expedientes. Desarrollo del frontend e integración con APIs en un entorno real y supervisado."
+      },
+      "deltabiz": {
+        "badge": "Proyecto profesional · DeltaBiz",
+        "title": "Sitio web de DeltaBiz",
+        "desc": "Sitio institucional de la consultora donde trabajo. Presenta su método de crecimiento para PyMEs, sus servicios y un formulario para pedir un diagnóstico. Diseño propio, responsive y con modo claro y oscuro."
       }
     },
     "next": {
@@ -94,7 +99,7 @@
         "period": "Sep 2026 – Actualidad",
         "title": "Desarrollador full stack · Soluciones IT",
         "org": "DeltaBiz · CarSys",
-        "desc": "Parte del área de Soluciones IT. Lidero CarSys y estoy a cargo del relevamiento de requerimientos: un sistema de gestión para lubricentros en desarrollo activo, ya desplegado y en uso con clientes reales, con backend en .NET y frontend en React.",
+        "desc": "Parte del área de Soluciones IT. Lidero CarSys y estoy a cargo del relevamiento de requerimientos: un sistema de gestión para lubricentros en desarrollo activo, ya desplegado y en uso con clientes reales, con backend en .NET y frontend en React. Además, desarrollé el sitio web institucional de la consultora.",
         "current": true
       },
       {

@@ -32,6 +32,7 @@ export default function Footer() {
             <div className="font-display font-bold">{t('footer.projects')}</div>
             <a className={linkClass} href="#projects">{t('projects.items.syscar.title')}</a>
             <a className={linkClass} href="#projects">{t('projects.items.expedientes.title')}</a>
+            <a className={linkClass} href="#projects">{t('projects.items.deltabiz.title')}</a>
           </div>
 
           <div className="flex flex-[1_1_140px] flex-col gap-2.5 text-[15px]">
